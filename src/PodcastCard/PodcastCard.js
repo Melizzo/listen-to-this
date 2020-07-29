@@ -6,7 +6,7 @@ const PodcastCard = (props) => {
       <h3 className="card-title">{props.title}</h3>
       <img 
         className="PC-img" 
-        src={props.img} 
+        src={props.randomPodcast.title} 
         description="props.description" 
       />
       {/* Future link to details page of podcast */}
