@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header/Header";
 import AllPodcastsPage from "./AllPodcastsPage/AllPodcastsPage"
+import { getSearchedPodcasts } from './ApiCalls'
 import "./App.css";
 
 const App = () => {
-  const [searchedResults, setSearchedResults] = useState('');
+  const [searchedResults, setSearchedResults] = useState([]);
   const [RandomPodcast, setRandomPodcast] = useState({});
 
 
@@ -13,10 +14,16 @@ const App = () => {
   // Functions
 
   // Search 
-  const findResults = () => {
-    // Display searched podcasts into podcast container
-    // const byPodcastName = searchPodcasts(searchValue);
-    // setSearchedResults([...byPodcastName]);
+  const findResults = (searchValue) => {
+    try {
+      const byPodcast = getSearchedPodcasts(searchValue);
+      console.log(byPodcast);
+    }
+    catch(error) {
+      console.log(error)
+    }
+    
+    // setSearchedResults([...byPodcast]);
   };
 
     return (
