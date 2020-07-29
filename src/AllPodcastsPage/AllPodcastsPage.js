@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PodCastCard from './PodcastCard/PodCastCard'
+import PodCastCard from '../PodcastCard/PodcastCard'
 
 
 const AllPodcastsPage = (props) => {
