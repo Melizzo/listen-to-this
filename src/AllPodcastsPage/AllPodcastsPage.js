@@ -3,7 +3,7 @@ import PodCastCard from '../PodcastCard/PodcastCard'
 
 
 const AllPodcastsPage = (props) => {
-  const [givenPodcasts, setGivenPodcast] = useState
+  const [givenPodcasts, setGivenPodcast] = useState([])
 
   // useEffect(() => {setGivenPodcast(props.givenPodcasts)})
 

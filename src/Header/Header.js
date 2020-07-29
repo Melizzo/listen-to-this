@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Header.css";
 
 const Header = ({ findResults }) => {
-  const [searchInput, setSearchInput ] = useState
+  const [searchInput, setSearchInput ] = useState('')
 
   const search = () => {
 		findResults(searchInput);
