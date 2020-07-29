@@ -7,7 +7,7 @@ const AllPodcastsPage = (props) => {
 
   // useEffect(() => {setGivenPodcast(props.givenPodcasts)})
 
-  const podcastCards = Object.values(givenPodcasts).map((podcast) => {
+  const podcastCards = Object.values(givenPodcasts).map((podcast) => { 
     return (
       <PodCastCard 
         // props.title
