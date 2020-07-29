@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PodCastCard from '../PodcastCard/PodcastCard'
 
 
 const AllPodcastsPage = (props) => {
   const [givenPodcasts, setGivenPodcast] = useState([])
 
-  // useEffect(() => {setGivenPodcast(props.givenPodcasts)})
+  useEffect(() => {setGivenPodcast(props.givenPodcasts)}, [])
 
-  const podcastCards = Object.values(givenPodcasts).map((podcast) => { 
+  let podcastCards
+ if (givenPodcasts) {
+    podcastCards = givenPodcasts.map((podcast) => { 
     return (
       <PodCastCard 
         // props.title
@@ -16,6 +18,8 @@ const AllPodcastsPage = (props) => {
       />
     )
   })
+}
+
   
 
   return (

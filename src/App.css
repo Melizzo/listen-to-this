@@ -1,4 +1,12 @@
 main {
-  background-color: #D0CDB5;
-  font-family: 'Catamaran', sans-serif;
+  background-color: #d0cdb5;
+  font-family: "Catamaran", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+  height: 100vh;
 }
