@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   const [searchInput, setSearchInput ] = useState
+
+  const search = () => {
+		props.findResults(searchInput);
+		setSearchInput('');
+	}
 
   return (
     <header>
