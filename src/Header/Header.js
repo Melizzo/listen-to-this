@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import "./Header.css";
 
-const Header = (props) => {
+const Header = ({ findResults }) => {
   const [searchInput, setSearchInput ] = useState
 
   const search = () => {
-		props.findResults(searchInput);
+		findResults(searchInput);
 		setSearchInput('');
-	}
+  }
+  
+  const buttonsEnabled = searchInput.trim() !== "";
 
   return (
     <header>
@@ -33,6 +35,9 @@ const Header = (props) => {
 								Search
 							</button>
 						</Link>
+            <Link to='/random_podcast'>
+						<h3 className='navlink-title'>Random Podcast</h3>
+					</Link>
 					</form>
     </header>
   );
