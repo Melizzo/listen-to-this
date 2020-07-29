@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <main>
-      <Header />
+      <Header findResults={findResults} />
     </main>
   );
 }

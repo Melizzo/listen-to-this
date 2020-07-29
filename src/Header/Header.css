@@ -1,8 +1,7 @@
 header {
-  align-items: baseline;
+  align-items: center;
   background-color: #C77612;
   display: flex;
-  display: block;
   height: 14vh;
   min-height: 120px;
   opacity: 0.8;
@@ -11,16 +10,3 @@ header {
   width: 100vw;
 }
 
-h1, h3 {
-  color: #9C9B99;
-}
-
-h1 {
-  margin: 0;
-  margin-top: .3em;
-  margin-left: 1em;
-}
-
-h3 {
-  margin-left: 1.7em;
-}
