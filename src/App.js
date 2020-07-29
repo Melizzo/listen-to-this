@@ -35,7 +35,7 @@ const App = () => {
         <Route
           path="/random_podcast"
           render={() => (
-						<Dashboard 
+						<RandomPodcast 
 							// randomPodcast={randomPodcast} 
 							// error={randomCError}
 						/>
@@ -44,9 +44,9 @@ const App = () => {
           <Route
             path="/results" 
             render= {() => (
-              <Dashboard
+              <AllPodcastsPage
                 // givenPodcasts={filteredResults}
-                // error={allCError}
+                // error={allPError}
               />
             )}
           />
