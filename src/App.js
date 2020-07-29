@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header/Header";
-import Dashboard from "./Dashboard/Dashboard"
+import RandomPodcastPage from "./RandomPodcastPage/RandomPodcastPage"
 import AllPodcastsPage from "./AllPodcastsPage/AllPodcastsPage"
 import RandomPodcast from "./RandomPodcast/RandomPodcast"
 import "./App.css";
@@ -35,7 +35,7 @@ const App = () => {
         <Route
           path="/random_podcast"
           render={() => (
-						<Dashboard 
+						<RandomPodcast 
 							// randomPodcast={randomPodcast} 
 							// error={randomCError}
 						/>
@@ -44,9 +44,9 @@ const App = () => {
           <Route
             path="/results" 
             render= {() => (
-              <Dashboard
+              <AllPodcastsPage
                 // givenPodcasts={filteredResults}
-                // error={allCError}
+                // error={allPError}
               />
             )}
           />
