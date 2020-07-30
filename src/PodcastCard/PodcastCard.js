@@ -10,14 +10,14 @@ const PodcastCard = (props) => {
         src={props.image} 
         description={'image of podcast'} 
       />
-      <p>'Episode title:'{props.episodeTitle}</p>
-      <p>{props.description}</p>
+      <p className="card-text">'Episode title:'{props.episodeTitle}</p>
+      <p className="card-text">{props.description}</p>
       {/* Future link to details page of podcast */}
-      {/* <Link to={`/podcast/${props.id}`}>
+      {/* <Link to={`/podcast/${props.id}`}> */}
         <button className="pc-button" aria-label='details-button'>
           More information about this Podcast
         </button>
-      </Link> */}
+      {/* </Link> */}
     </section>
   );
 };

@@ -3,9 +3,9 @@ import PodcastCard from '../PodcastCard/PodcastCard'
 
 
 const AllPodcastsPage = (props) => {
-  const [givenPodcasts, setGivenPodcast] = useState([])
+  const [givenPodcasts, setGivenPodcasts] = useState([])
 
-  useEffect(() => {setGivenPodcast(props.givenPodcasts)}, [])
+  useEffect(() => {setGivenPodcasts(props.givenPodcasts)}, [])
 
   let podcastCards
  if (givenPodcasts) {
