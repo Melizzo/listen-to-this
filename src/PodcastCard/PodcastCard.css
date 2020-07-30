@@ -12,3 +12,12 @@
 	opacity: 1;
 }
 
+.card-title {
+  color: white;
+	display: flex;
+	font-size: 14px;
+	justify-content: center;
+	margin: 0;
+	width: 200px;
+	text-align: center;
+}
