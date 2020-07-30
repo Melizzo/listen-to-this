@@ -1,15 +1,37 @@
-import React from 'react'
-
-const PodcastDetails = ({id}) => {
-
- return(
-   <section className="podcast-details-wrapper">
-     <section className="podcast-details-card">
-       <h3></h3>
-     </section>
-   </section>
- )
-}
+import React, { useState, useEffect } from "react";
+import { getPodcastDetails } from "../ApiCalls";
 
 
-export default PodcastDetails
+const PodcastDetails = ({ id }) => {
+  const [selectedPodcast, getSelectedPodcast] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await getPodcastDetails(id);
+      console.log('response', response);
+      getSelectedPodcast(response);
+    }
+    fetchData();
+  }, [id]);
+
+  const podcastEpisodes = () => {}
+  //
+
+  return (
+    <section className="podcast-details-wrapper">
+      <section className="podcast-details-card">
+        <h3>{selectedPodcast.title}</h3>
+        <img 
+        className="PC-img" 
+        src={props.image} 
+        description={'image of podcast'} 
+      />
+
+        <section className="pc-episodes">
+          <p>></p>
+        </section>
+      </section>
+    </section>
+  );
+};
+
+export default PodcastDetails;

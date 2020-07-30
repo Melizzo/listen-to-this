@@ -18,17 +18,17 @@ const rootURL = 'https://listen-api.listennotes.com/api/v2/'
 export const getSearchedPodcasts = (searchValue) => {
   return testSearch.results
 }
-
-export const getPodcastDetails = async (podcastID) => {
-    const response = await unirest.get(`${rootURL}podcasts/${podcastID}/`)
-    .headers('X-ListenAPI-Key', apiKey)
-    if(response.ok) {
-      return response.body;
-     } else {
-      throw new Error(response.statusText);
-    }
-  }
+// Use this for final submission
+// export const getPodcastDetails = async (podcastID) => {
+//     const response = await unirest.get(`${rootURL}podcasts/${podcastID}/`)
+//     .headers('X-ListenAPI-Key', apiKey)
+//     if(response.ok) {;
+//       return response.body;
+//      } else {
+//       throw new Error(response.statusText);
+//     }
+//   }
 // DELETE before submission
-  // export const getSearchedPodcasts = (podcastID) => {
-  //   return testPodcastDetails
-  // }
+  export const getPodcastDetails = (podcastID) => {
+    return testPodcastDetails
+  }

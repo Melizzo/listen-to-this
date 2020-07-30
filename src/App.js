@@ -32,6 +32,7 @@ const App = () => {
         <Route 
           path="/podcast/:id"
           render={({ match }) => {
+            console.log(match);
             const { id } = match.params;
             return(
               <PodcastDetails 

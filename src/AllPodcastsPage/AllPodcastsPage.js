@@ -1,29 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PodcastCard from '../PodcastCard/PodcastCard'
 import './AllPodcastsPage.css'
 
 
 const AllPodcastsPage = ({searchedResults, error}) => {
-  const [givenPodcasts, setGivenPodcasts] = useState([])
-
-  useEffect(() => {setGivenPodcasts(searchedResults)}, [])
 
   let podcastCards
- if (givenPodcasts) {
-    podcastCards = searchedResults.map((podcast) => { 
-    return (
-      <PodcastCard 
-        id={podcast.id}
-        key={podcast.id}
-        podcastTitle={podcast.podcast.title_original}
-        episodeTitle={podcast.title_original}
-        image={podcast.thumbnail}
-        description={podcast.description_highlighted}
-      />
-    )
-  })
-}
-
+  if (searchedResults.length !== 0) {
+      podcastCards = searchedResults.map((podcast) => { 
+      return (
+        <PodcastCard 
+          id={podcast.podcast.id}
+          key={podcast.id}
+          podcastTitle={podcast.podcast.title_original}
+          episodeTitle={podcast.title_original}
+          image={podcast.thumbnail}
+          description={podcast.description_highlighted}
+        />
+      )
+    })
+  }
+  
   return (
     <section className="all-podcasts-container">
       {/* add in error via props 
