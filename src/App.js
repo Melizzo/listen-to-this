@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header/Header";
 import AllPodcastsPage from "./AllPodcastsPage/AllPodcastsPage"
-import PodcastDetails from './'
+import PodcastDetails from './PodcastDetails/PodcastDetails'
 import { getSearchedPodcasts } from './ApiCalls'
 import "./App.css";
 
@@ -31,7 +31,7 @@ const App = () => {
         <Switch>
         <Route 
           path="/podcast/:id"
-          render={({ match}) => {
+          render={({ match }) => {
             const { id } = match.params;
             return(
               <PodcastDetails 
