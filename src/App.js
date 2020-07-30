@@ -14,7 +14,7 @@ const App = () => {
   // Functions
 
   // Search 
-  const findResults = (searchValue) => {
+  const findResults = async (searchValue) => {
     try {
       const byPodcast = await getSearchedPodcasts(searchValue);
       setSearchedResults(byPodcast);
