@@ -16,8 +16,8 @@ const App = () => {
   // Search 
   const findResults = (searchValue) => {
     try {
-      const byPodcast = getSearchedPodcasts(searchValue);
-      console.log(byPodcast);
+      const byPodcast = await getSearchedPodcasts(searchValue);
+      setSearchedResults(byPodcast);
     }
     catch(error) {
       console.log(error)
