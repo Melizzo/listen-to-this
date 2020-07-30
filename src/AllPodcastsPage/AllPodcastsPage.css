@@ -12,3 +12,10 @@
 	position: absolute;
   width: 100vw;
 }
+
+.no-searched-podcasts {
+	color: #9C9B99;
+	font-size: 1.3em;
+	margin-top: 8%;
+	font-style: italic;
+}
