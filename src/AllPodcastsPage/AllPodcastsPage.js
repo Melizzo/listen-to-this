@@ -24,7 +24,7 @@ const AllPodcastsPage = (props) => {
 }
 
   return (
-    <section className="All-podcasts-container">
+    <section className="all-podcasts-container">
       {/* add in error via props 
       	{props.error && 
 				<div className='error-msg'>404: No Podcasts found</div>

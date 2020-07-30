@@ -1,0 +1,14 @@
+.all-podcasts-container {
+  background-color: black;
+	bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+	height: 76vh;
+  justify-content: center;
+  opacity: 0.95;
+  overflow: scroll;
+	position: absolute;
+  width: 100vw;
+}
