@@ -21,3 +21,9 @@
 	width: 200px;
 	text-align: center;
 }
+
+.CC-img {
+	margin: 2% 0;
+	max-width: 76%;
+	object-fit: cover;
+}
