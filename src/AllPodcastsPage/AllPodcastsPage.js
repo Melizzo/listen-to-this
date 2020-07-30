@@ -3,14 +3,14 @@ import PodcastCard from '../PodcastCard/PodcastCard'
 import './AllPodcastsPage.css'
 
 
-const AllPodcastsPage = (props) => {
+const AllPodcastsPage = ({searchedResults, error}) => {
   const [givenPodcasts, setGivenPodcasts] = useState([])
 
-  useEffect(() => {setGivenPodcasts(props.givenPodcasts)}, [])
+  useEffect(() => {setGivenPodcasts(searchedResults)}, [])
 
   let podcastCards
  if (givenPodcasts) {
-    podcastCards = givenPodcasts.map((podcast) => { 
+    podcastCards = searchedResults.map((podcast) => { 
     return (
       <PodcastCard 
         id={podcast.id}
@@ -32,8 +32,8 @@ const AllPodcastsPage = (props) => {
 			}
       */}
       {/* add in error via props */}
-      {!props.error && podcastCards}
-      {!props.error && !podcastCards && <h3 className="no-searched-podcasts">Search for a podcast above! Enter in a topic that interests you.</h3>}
+      {!error && podcastCards}
+      {!error && !podcastCards && <h3 className="no-searched-podcasts">Search for a podcast above! Enter in a topic that interests you.</h3>}
     </section>
   )
 }

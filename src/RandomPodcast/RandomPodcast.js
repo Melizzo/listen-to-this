@@ -11,20 +11,23 @@ const RandomPodcast = (props) => {
     */}
       {!props.error && (
         <section className="random-podcast">
-          <h3>{props.strDrink}</h3>
-          <h3 className="card-title">{props.title}</h3>
-          <img
-            className="PC-img"
-            src={props.title}
-            description="props.description"
+          <h3 className="card-title">{props.podcastTitle}</h3>
+          <img 
+            className="PC-img" 
+            src={props.image} 
+            description={'image of podcast'} 
           />
-          {/* <Link to={`/podcast/${props.id}`}>
-        <button className="pc-button" aria-label='details-button'>
-          More information about this Podcast
-        </button>
-      </Link> */}
+          <p className="card-text">Episode title: {props.episodeTitle}</p>
+          <p className="card-text">{props.description}</p>
+        {/* Future link to details page of podcast */}
+        {/* <Link to={`/podcast/${props.id}`}> */}
+          <button className="pc-button" aria-label='details-button'>
+            More information about this Podcast
+          </button>
+           {/* </Link> */}
         </section>
-      )}
+        )}
+      )
     </section>
   );
 };

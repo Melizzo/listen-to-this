@@ -10,7 +10,7 @@ const PodcastCard = (props) => {
         src={props.image} 
         description={'image of podcast'} 
       />
-      <p className="card-text">'Episode title:'{props.episodeTitle}</p>
+      <p className="card-text">Episode title: {props.episodeTitle}</p>
       <p className="card-text">{props.description}</p>
       {/* Future link to details page of podcast */}
       {/* <Link to={`/podcast/${props.id}`}> */}
