@@ -27,8 +27,18 @@ const App = () => {
     return (
       <main>
         <Header findResults={findResults} />
-
         <Switch>
+        <Route 
+          path="/podcast/:id"
+          render={({ match}) => {
+            const { id } = match.params;
+            return(
+              <PodcastDetails 
+                id={id}
+              />
+            )
+          }}
+        />
         <Route
           path="/random_podcast"
           render={() => (
