@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PodcastCard from '../PodcastCard/PodcastCard'
+import './AllPodcastsPage.css'
 
 
 const AllPodcastsPage = (props) => {
