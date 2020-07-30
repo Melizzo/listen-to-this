@@ -1,5 +1,6 @@
 import apiKey from './apiKey'
 import testSearch from './TestAPISearchVegan.json'
+import testPodcastDetails from './TestPodCastDetails.json'
 const unirest = require('unirest');
 const rootURL = 'https://listen-api.listennotes.com/api/v2/'
 
@@ -18,4 +19,16 @@ export const getSearchedPodcasts = (searchValue) => {
   return testSearch.results
 }
 
-// create test search results fetch
+export const getPodcastDetails = async (podcastID) => {
+    const response = await unirest.get(`${rootURL}podcasts/${podcastID}/`)
+    .headers('X-ListenAPI-Key', apiKey)
+    if(response.ok) {
+      return response.body;
+     } else {
+      throw new Error(response.statusText);
+    }
+  }
+// DELETE before submission
+  // export const getSearchedPodcasts = (podcastID) => {
+  //   return testPodcastDetails
+  // }
