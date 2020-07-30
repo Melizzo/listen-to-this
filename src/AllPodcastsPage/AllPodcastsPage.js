@@ -1,22 +1,27 @@
-import React, { useState } from 'react'
-import PodCastCard from '../PodcastCard/PodcastCard'
+import React, { useState, useEffect } from 'react'
+import PodcastCard from '../PodcastCard/PodcastCard'
 
 
 const AllPodcastsPage = (props) => {
-  const [givenPodcasts, setGivenPodcast] = useState([])
+  const [givenPodcasts, setGivenPodcasts] = useState([])
 
-  // useEffect(() => {setGivenPodcast(props.givenPodcasts)})
+  useEffect(() => {setGivenPodcasts(props.givenPodcasts)}, [])
 
-  const podcastCards = Object.values(givenPodcasts).map((podcast) => {
+  let podcastCards
+ if (givenPodcasts) {
+    podcastCards = givenPodcasts.map((podcast) => { 
     return (
-      <PodCastCard 
-        // props.title
-        // props.img
-        // props.description
+      <PodcastCard 
+        id={podcast.id}
+        key={podcast.id}
+        podcastTitle={podcast.podcast.title_original}
+        episodeTitle={podcast.title_original}
+        image={podcast.thumbnail}
+        description={podcast.description_highlighted}
       />
     )
   })
-  
+}
 
   return (
     <section className="All-podcasts-container">
