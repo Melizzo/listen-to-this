@@ -2,9 +2,43 @@
 	background-color: black;
 	bottom: 0;
 	color: white;
-	height: 76vh;
+	height: 86vh;
 	opacity: 0.9;
 	overflow: scroll;
 	position: absolute;
 	width: 100vw;
+}
+
+.podcast-details-card {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+  margin: 0 auto;
+  margin-top: 3em;
+	padding: 20px;
+	text-align: center;
+	width: 80vw;
+}
+
+.pc-title {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 30px;
+}
+
+img {
+  border: 1px solid white;
+}
+
+.pc-p {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 20px;
+}
+
+.pc-at {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+}
+li {
+  text-align: left;
 }
