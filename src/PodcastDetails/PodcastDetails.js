@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { getPodcastDetails } from "../ApiCalls";
+import { getPodcastDetails } from "../ApiCalls"
+import './PodcastDetails.css'
 
 const PodcastDetails = ({ id }) => {
   const [selectedPodcast, getSelectedPodcast] = useState('');
@@ -20,8 +21,6 @@ const PodcastDetails = ({ id }) => {
      })
     console.log(podcastEpisodes);
   }
-
-
 
   return (
     <section className="podcast-details-wrapper">
