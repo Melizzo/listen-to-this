@@ -31,8 +31,8 @@ const PodcastDetails = ({ id }) => {
           src={selectedPodcast.image}
           description={"image of podcast"}
         />
-        <p>{selectedPodcast.description}</p>
-        <a href={selectedPodcast.website}target='_blank' rel="noopener noreferrer">Visit website</a>
+        <p className="pc-p">{selectedPodcast.description}</p>
+        <a className="pc-at" href={selectedPodcast.website}target='_blank' rel="noopener noreferrer">Podcast website</a>
         <p></p>
           <section className="episode-container">
               <ul>

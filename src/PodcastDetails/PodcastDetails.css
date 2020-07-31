@@ -24,3 +24,21 @@
   font-family: 'Signika Negative', sans-serif;
   font-size: 30px;
 }
+
+img {
+  border: 1px solid white;
+}
+
+.pc-p {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 20px;
+}
+
+.pc-at {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+}
+li {
+  text-align: left;
+}
