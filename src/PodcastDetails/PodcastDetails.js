@@ -25,7 +25,7 @@ const PodcastDetails = ({ id }) => {
   return (
     <section className="podcast-details-wrapper">
       <section className="podcast-details-card">
-        <h3>{selectedPodcast.title}</h3>
+        <h3 className="pc-title" >{selectedPodcast.title}</h3>
         <img
           className="PC-img"
           src={selectedPodcast.image}
