@@ -42,6 +42,13 @@ const App = () => {
           }}
         />
         <Route
+          path="/favoritePodcasts"
+          render={() => (
+            <AllPodcastsPage 
+              favoritePodcasts={favoritePodcasts} />
+          )}
+        />
+
         <Route
           path="/random_podcast"
           render={() => (
