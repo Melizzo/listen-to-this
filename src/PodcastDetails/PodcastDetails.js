@@ -5,7 +5,6 @@ import './PodcastDetails.css'
 const PodcastDetails = ({ id }) => {
   const [selectedPodcast, getSelectedPodcast] = useState('');
 
-
   useEffect(() => {
     async function fetchData() {
       const response = await getPodcastDetails(id);
