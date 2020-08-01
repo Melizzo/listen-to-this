@@ -10,6 +10,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "testing-library": "0.0.2",
     "unirest": "^0.6.0"
   },
   "scripts": {
