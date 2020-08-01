@@ -12,8 +12,8 @@ const PodcastDetails = ({ id }) => {
       getSelectedPodcast(response);
     }
     fetchData();
-
   }, [id]);
+
   let podcastEpisodes 
   if(selectedPodcast) {
      podcastEpisodes = selectedPodcast.episodes.map((item, i)=>{
