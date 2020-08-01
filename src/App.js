@@ -9,8 +9,7 @@ import "./App.css";
 const App = () => {
   const [searchedResults, setSearchedResults] = useState([]);
   const [RandomPodcast, setRandomPodcast] = useState({});
-
-
+  const [favoritePodcasts, setFavoritePodcasts] = useState([]);
 
   // Functions
 
@@ -36,10 +35,13 @@ const App = () => {
             return(
               <PodcastDetails 
                 id={id}
+                favoritePodcasts={favoritePodcasts}
+                setFavoritePodcasts={setFavoritePodcasts}
               />
             )
           }}
         />
+        <Route
         <Route
           path="/random_podcast"
           render={() => (
