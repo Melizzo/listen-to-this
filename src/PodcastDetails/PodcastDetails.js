@@ -17,15 +17,14 @@ const PodcastDetails = ({ id }) => {
   let podcastEpisodes 
   if(selectedPodcast) {
      podcastEpisodes = selectedPodcast.episodes.map((item, i)=>{
-       return <li key={i}>{item.title}</li>
+       return <li key={id}>{item.title}</li>
      })
-    console.log(podcastEpisodes);
   }
 
   return (
     <section className="podcast-details-wrapper">
       <section className="podcast-details-card">
-        <h3 className="pc-title" >{selectedPodcast.title}</h3>
+        <h3 className="pc-title">{selectedPodcast.title}</h3>
         <img
           className="PC-img"
           src={selectedPodcast.image}
