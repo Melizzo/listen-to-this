@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header/Header";
 import AllPodcastsPage from "./AllPodcastsPage/AllPodcastsPage"
@@ -9,10 +9,12 @@ import "./App.css";
 const App = () => {
   const [searchedResults, setSearchedResults] = useState([]);
   const [RandomPodcast, setRandomPodcast] = useState({});
+  const [favoritePodcasts, setFavoritePodcasts] = useState([]);
+  const [isFavorite, setIsFavorite] = useState('');
 
-
-
-  // Functions
+  const toggleFavoritePodcast = (id) => {
+   return favoritePodcasts.some(podcast => podcast.podcast.id === id ? true : false)
+  }
 
   // Search 
   const findResults = async (searchValue) => {
@@ -36,10 +38,23 @@ const App = () => {
             return(
               <PodcastDetails 
                 id={id}
+                favoritePodcasts={favoritePodcasts}
+                setFavoritePodcasts={setFavoritePodcasts}
+                toggleFavoritePodcast={toggleFavoritePodcast}
+                isFavorite={isFavorite}
+                setIsFavorite={setIsFavorite}
               />
             )
           }}
         />
+        <Route
+          path="/favoritePodcasts"
+          render={() => (
+            <AllPodcastsPage 
+            searchedResults={favoritePodcasts} />
+            )}
+            />
+
         <Route
           path="/random_podcast"
           render={() => (
