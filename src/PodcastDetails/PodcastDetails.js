@@ -28,9 +28,10 @@ const PodcastDetails = ({ id }) => {
           className="PC-img"
           src={selectedPodcast.image}
           description={"image of podcast"}
+          alt="logo of podcast"
         />
         <p className="pc-p">{selectedPodcast.description}</p>
-        <a className="pc-at" href={selectedPodcast.website}target='_blank' rel="noopener noreferrer">Podcast website</a>
+        <a className="pc-at" href={selectedPodcast.website} aria-label="link to podcast website"target='_blank' rel="noopener noreferrer">Podcast website</a>
         <p></p>
           <section className="episode-container">
               <ul>
