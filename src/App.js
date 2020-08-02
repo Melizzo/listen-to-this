@@ -13,6 +13,14 @@ const App = () => {
 
   // Functions
 
+  // const addPodcastToFavorites = (podcastObj) => {
+  //   setFavoritePodcasts(podcastObj)
+  // }
+
+  const toggleFavoritePodcast = (id) => {
+   return favoritePodcasts.find(podcast => podcast.id === id ? true : false)
+  }
+
   // Search 
   const findResults = async (searchValue) => {
     try {
@@ -37,6 +45,7 @@ const App = () => {
                 id={id}
                 favoritePodcasts={favoritePodcasts}
                 setFavoritePodcasts={setFavoritePodcasts}
+                toggleFavoritePodcast={toggleFavoritePodcast}
               />
             )
           }}
@@ -45,9 +54,10 @@ const App = () => {
           path="/favoritePodcasts"
           render={() => (
             <AllPodcastsPage 
-              favoritePodcasts={favoritePodcasts} />
-          )}
-        />
+            searchedResults={favoritePodcasts} />
+            )}
+            />
+            {console.log(favoritePodcasts)}
 
         <Route
           path="/random_podcast"
