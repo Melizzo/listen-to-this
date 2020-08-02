@@ -7,9 +7,11 @@ const PodcastDetails = ({
   favoritePodcasts,
   setFavoritePodcasts,
   toggleFavoritePodcast,
+  isFavorite,
+  setIsFavorite
 }) => {
   const [selectedPodcast, getSelectedPodcast] = useState("");
-  const [isFavorite, setIsFavorite] = useState("");
+  // const [isFavorite, setIsFavorite] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -30,8 +32,9 @@ const PodcastDetails = ({
   let newArray;
   const clickHandler = async () => {
     if (toggleFavoritePodcast(selectedPodcast.id)) {
-      newArray = favoritePodcasts.filter((p) => p.id !== selectedPodcast.id);
+      newArray = favoritePodcasts.filter(p => p.podcast.id !== selectedPodcast.id);
       await setFavoritePodcasts([...newArray]);
+      console.log('PodcastDetails favoritePodcasts:', favoritePodcasts);
       setIsFavorite(false);
     } else {
       podcast = {
@@ -43,10 +46,10 @@ const PodcastDetails = ({
           title_original: selectedPodcast.title,
         },
       };
+      setIsFavorite(true);
+      await setFavoritePodcasts([...favoritePodcasts, podcast]);
     }
 
-    setFavoritePodcasts([...favoritePodcasts, podcast]);
-    setIsFavorite(true);
   };
 
   return (
@@ -68,7 +71,7 @@ const PodcastDetails = ({
           Podcast website
         </a>
         <section className="button-container">
-          {isFavorite == false || "" ? (
+          {isFavorite == '' || false ? (
             <button role="button" onClick={() => clickHandler()}>
               Listen to this podcast later
             </button>

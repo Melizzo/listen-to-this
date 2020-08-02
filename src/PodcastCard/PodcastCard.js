@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom'
 
 const PodcastCard = (props) => {
-  console.log(props)
   return (
     <section className="podcast-card">
       <h3 className="card-title">{props.podcastTitle}</h3>
