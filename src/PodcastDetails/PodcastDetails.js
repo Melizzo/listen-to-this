@@ -11,7 +11,6 @@ const PodcastDetails = ({
   setIsFavorite
 }) => {
   const [selectedPodcast, getSelectedPodcast] = useState("");
-  // const [isFavorite, setIsFavorite] = useState("");
 
   useEffect(() => {
     async function fetchData() {
