@@ -12,12 +12,6 @@ const App = () => {
   const [favoritePodcasts, setFavoritePodcasts] = useState([]);
   const [isFavorite, setIsFavorite] = useState('');
 
-  // Functions
-
-  // const addPodcastToFavorites = (podcastObj) => {
-  //   setFavoritePodcasts(podcastObj)
-  // }
-
   const toggleFavoritePodcast = (id) => {
    return favoritePodcasts.some(podcast => podcast.podcast.id === id ? true : false)
   }
