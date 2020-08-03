@@ -14,7 +14,9 @@ const Header = ({ findResults }) => {
 
   return (
     <header>
-      <h1 className="app-header-title">Listen To This!</h1>
+      <Link to="/">
+        <h1 className="app-header-title">Listen To This!</h1>
+      </Link>
       <form className="search-bar">
         <input
           type="text"
@@ -35,14 +37,10 @@ const Header = ({ findResults }) => {
             Search
           </button>
         </Link>
-        <Link to="/random_podcast"></Link>
-        <Link to="/favoritePodcasts">
-          <button className="header-search-button">View Saved Podcasts</button>
-        </Link>
-        <Link>
-          <h3 className="navlink-title">Random Podcast</h3>
-        </Link>
       </form>
+      <Link to="/favoritePodcasts">
+        <button className="header-search-button">View Saved Podcasts</button>
+      </Link>
     </header>
   );
 };

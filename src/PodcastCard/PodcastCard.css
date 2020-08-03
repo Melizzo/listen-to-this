@@ -1,15 +1,17 @@
 .podcast-card {
-	background-size: cover;
 	align-items: center;
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin: 2%;
-	max-height: 290px;
+	margin-left: 3%;
+	max-height: 500px;
 	min-height: 290px;
-	max-width: 250px;
+	max-width: 300px;
 	min-width: 250px;
 	opacity: 1;
+	overflow: scroll;
 }
 
 .card-title {
