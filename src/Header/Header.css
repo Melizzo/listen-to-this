@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background-color: #C77612;
+  background-color: #c77612;
   display: flex;
   flex-flow: row wrap;
   height: 14vh;
@@ -11,4 +11,3 @@ header {
   top: 0;
   width: 100vw;
 }
-

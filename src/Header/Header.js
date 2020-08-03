@@ -14,7 +14,9 @@ const Header = ({ findResults }) => {
 
   return (
     <header>
-      <h1 className="app-header-title">Listen To This!</h1>
+      <Link to="/">
+        <h1 className="app-header-title">Listen To This!</h1>
+      </Link>
       <form className="search-bar">
         <input
           type="text"
