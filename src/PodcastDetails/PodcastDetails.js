@@ -77,7 +77,7 @@ const PodcastDetails = ({
               Listen to this podcast later
             </button>
           ) : (
-            <button role="button" onClick={() => clickHandler()}>
+            <button role="button" aria-label="remove Podcast" onClick={() => clickHandler()}>
               remove Podcast from listen to later list
             </button>
           )}

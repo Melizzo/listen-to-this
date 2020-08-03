@@ -1,7 +1,7 @@
 import React from 'react'
 import PodcastDetails from './PodcastDetails'
 import "@testing-library/jest-dom"
-import {render, waitFor, fireEvent, getByAltText, getAllByAltText, getByLabelText, getByRole } from "@testing-library/react"
+import {render, waitFor, fireEvent, getByLabelText } from "@testing-library/react"
 import { MemoryRouter } from "react-router-dom"
 import { getPodcastDetails } from '../ApiCalls'
 jest.mock("../ApiCalls.js")
@@ -42,7 +42,7 @@ describe("PodcastDetails", ()  => {
     const button = getByRole("button") 
     const episode1 = getByText('Episode 25 - ALISON BRIE LIVE!')
     const episode2 = getByText('Episode 24 - Same-Sex Celebrity Crush - NATHAN FILLION')
-      // podcastTitle does not exist in Document, but await allows other elements to be found. 
+      // podcastTitle does not exist in Document, but await allows all other elements to be found. 
     expect(episodeTitle).toBeInTheDocument();
     expect(description).toBeInTheDocument();
     expect(website).toBeInTheDocument();
@@ -51,5 +51,29 @@ describe("PodcastDetails", ()  => {
     expect(button).toBeInTheDocument();
   })
 
+  it("should be able to click on the Button", async () => {
+    const mockToggle = jest.fn()
+
+    const { getByText, getByLabelText, getByRole } = render(
+     <MemoryRouter>
+     <PodcastDetails 
+       isFavorite={('')}
+       setIsFavorite={Function}
+       toggleFavoritePodcast={mockToggle} 
+       setFavoritePodcasts={Function}
+       favoritePodcasts={[]}
+      />
+     </MemoryRouter>
+   )
+
+   const podcastTitle = await waitFor(()=>{ getByText("New Title")})
+   const button = getByRole("button") 
   
+   fireEvent.click(button)
+
+   expect(mockToggle).toHaveBeenCalled()
+
+ })
+
+
 })
