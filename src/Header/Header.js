@@ -35,14 +35,10 @@ const Header = ({ findResults }) => {
             Search
           </button>
         </Link>
-        <Link to="/random_podcast"></Link>
-        <Link to="/favoritePodcasts">
-          <button className="header-search-button">View Saved Podcasts</button>
-        </Link>
-        <Link>
-          <h3 className="navlink-title">Random Podcast</h3>
-        </Link>
       </form>
+      <Link to="/favoritePodcasts">
+        <button className="header-search-button">View Saved Podcasts</button>
+      </Link>
     </header>
   );
 };

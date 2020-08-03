@@ -2,7 +2,9 @@ header {
   align-items: center;
   background-color: #C77612;
   display: flex;
+  flex-flow: row wrap;
   height: 14vh;
+  justify-content: space-between;
   min-height: 120px;
   opacity: 0.8;
   position: absolute;
