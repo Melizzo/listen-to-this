@@ -59,6 +59,7 @@ const PodcastDetails = ({
           className="PC-img"
           src={selectedPodcast.image}
           description={"image of podcast"}
+          alt="logo of podcast"
         />
         <p className="pc-p">{selectedPodcast.description}</p>
         <a
@@ -66,6 +67,7 @@ const PodcastDetails = ({
           href={selectedPodcast.website}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="link to podcast website"
         >
           Podcast website
         </a>
@@ -75,7 +77,7 @@ const PodcastDetails = ({
               Listen to this podcast later
             </button>
           ) : (
-            <button role="button" onClick={() => clickHandler()}>
+            <button role="button" aria-label="remove Podcast" onClick={() => clickHandler()}>
               remove Podcast from listen to later list
             </button>
           )}
