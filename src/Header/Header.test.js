@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import "@testing-library/jest-dom";
-import { render, fireEvent, getAllByPlaceholderText } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { getSearchedPodcasts } from "../ApiCalls";
-jest.mock("../ApiCalls.js");
 
 describe("Header", () => {
   it("should render the correct content", () => {
@@ -36,19 +34,21 @@ describe("Header", () => {
     expect(searchInput).toHaveValue('cats')
   })
 
-  // it("should click submit button", () => {
-  //   const mockFind = jest.fn();
-  //   const { getByText } = render(
-  //     <MemoryRouter>
-  //       <Header findResults={mockFind} />
-  //     </MemoryRouter>
-  //   );
-  //   const button = getByText("Search");
+  it("should click submit button", () => {
+    const mockFind = jest.fn();
 
-  //   fireEvent.click(button);
+    const { getByText, getByPlaceholderText } = render(
+      <MemoryRouter>
+        <Header findResults={mockFind} />
+      </MemoryRouter>
+    );
 
-  //   expect(mockFind).toBeCalled();
-  // });
+    const button = getByText("Search");
+    const searchInput = getByPlaceholderText('search for a podcast')
+    fireEvent.change(searchInput, {target: {value: 'cats'}});
+    fireEvent.click(button);
+    expect(mockFind).toHaveBeenCalledTimes(1);
+  });
 
   // it("should click favorite podcast button", () => {
   //   const mockFind = jest.fn();
@@ -57,11 +57,11 @@ describe("Header", () => {
   //       <Header findResults={mockFind} />
   //     </MemoryRouter>
   //   );
-  //   const button = getByText("Search");
+  //   const button = getByText("View Saved Podcasts");
 
   //   fireEvent.click(button);
 
-  //   expect(mockFind).toBeCalled();
+  //   expect(mockFind).toHaveBeenCalled();
   // });
 
 });
