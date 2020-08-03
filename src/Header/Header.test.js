@@ -50,18 +50,16 @@ describe("Header", () => {
     expect(mockFind).toHaveBeenCalledTimes(1);
   });
 
-  // it("should click favorite podcast button", () => {
-  //   const mockFind = jest.fn();
-  //   const { getByText, getByLabelText } = render(
-  //     <MemoryRouter>
-  //       <Header findResults={mockFind} />
-  //     </MemoryRouter>
-  //   );
-  //   const button = getByText("View Saved Podcasts");
+  it("should click favorite podcast button", () => {
+    const mockFind = jest.fn();
+    const { getByText, getByLabelText } = render(
+      <MemoryRouter>
+        <Header findResults={mockFind} />
+      </MemoryRouter>
+    );
 
-  //   fireEvent.click(button);
-
-  //   expect(mockFind).toHaveBeenCalled();
-  // });
+    const button = getByText("View Saved Podcasts");
+    fireEvent.click(button);
+  });
 
 });
