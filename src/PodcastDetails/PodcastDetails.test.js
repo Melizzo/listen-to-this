@@ -53,6 +53,7 @@ describe("PodcastDetails", ()  => {
 
   it("should be able to click on the Button", async () => {
     const mockToggle = jest.fn()
+    const mockFavorite = jest.fn()
 
     const { getByText, getByLabelText, getByRole } = render(
      <MemoryRouter>
@@ -60,7 +61,7 @@ describe("PodcastDetails", ()  => {
        isFavorite={('')}
        setIsFavorite={Function}
        toggleFavoritePodcast={mockToggle} 
-       setFavoritePodcasts={Function}
+       setFavoritePodcasts={mockFavorite}
        favoritePodcasts={[]}
       />
      </MemoryRouter>
