@@ -1,7 +1,7 @@
 import React from 'react'
 import PodcastDetails from './PodcastDetails'
 import "@testing-library/jest-dom"
-import {render, waitFor, fireEvent, getByAltText, getAllByAltText, getByLabelText } from "@testing-library/react"
+import {render, waitFor, fireEvent, getByAltText, getAllByAltText, getByLabelText, getByRole } from "@testing-library/react"
 import { MemoryRouter } from "react-router-dom"
 import { getPodcastDetails } from '../ApiCalls'
 jest.mock("../ApiCalls.js")
@@ -29,7 +29,7 @@ describe("PodcastDetails", ()  => {
   })
   
   it("should display Podcast details on the page", async () => {
-     const { getByText, getByLabelText } = render(
+     const { getByText, getByLabelText, getByRole } = render(
       <MemoryRouter>
       <PodcastDetails  />
       </MemoryRouter>
@@ -39,6 +39,7 @@ describe("PodcastDetails", ()  => {
     const description = getByText("This is an awesome description");
     const episodeTitle = getByText("Episode 25 - ALISON BRIE LIVE!");
     const website = getByLabelText("link to podcast website")
+    const button = getByRole("button") 
     const episode1 = getByText('Episode 25 - ALISON BRIE LIVE!')
     const episode2 = getByText('Episode 24 - Same-Sex Celebrity Crush - NATHAN FILLION')
       // podcastTitle does not exist in Document, but await allows other elements to be found. 
@@ -47,7 +48,8 @@ describe("PodcastDetails", ()  => {
     expect(website).toBeInTheDocument();
     expect(episode1).toBeInTheDocument();
     expect(episode2).toBeInTheDocument();
-    
-
+    expect(button).toBeInTheDocument();
   })
+
+  
 })

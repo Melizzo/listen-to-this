@@ -67,6 +67,7 @@ const PodcastDetails = ({
           href={selectedPodcast.website}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="link to podcast website"
         >
           Podcast website
         </a>
