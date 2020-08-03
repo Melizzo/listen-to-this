@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header/Header";
 import AllPodcastsPage from "./AllPodcastsPage/AllPodcastsPage"
@@ -8,7 +8,6 @@ import "./App.css";
 
 const App = () => {
   const [searchedResults, setSearchedResults] = useState([]);
-  const [RandomPodcast, setRandomPodcast] = useState({});
   const [favoritePodcasts, setFavoritePodcasts] = useState([]);
   const [isFavorite, setIsFavorite] = useState('');
 
@@ -54,16 +53,6 @@ const App = () => {
             searchedResults={favoritePodcasts} />
             )}
             />
-
-        <Route
-          path="/random_podcast"
-          render={() => (
-						<RandomPodcast 
-							// randomPodcast={randomPodcast} 
-							// error={randomCError}
-						/>
-					)}
-        />
           <Route
             path="/" 
             render= {() => (
