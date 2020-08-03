@@ -24,3 +24,5 @@ yarn-error.log*
 apiKey.js
 TestAPISearchVegan.json
 TestPodCastDetails.json
+TestAPISearchVegan.js
+TestPodCastDetails.js

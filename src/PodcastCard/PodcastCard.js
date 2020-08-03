@@ -6,6 +6,7 @@ const PodcastCard = (props) => {
     <section className="podcast-card">
       <h3 className="card-title">{props.podcastTitle}</h3>
       <img 
+        alt="Podcast logo"
         className="PC-img" 
         src={props.image} 
         description={'image of podcast'} 
