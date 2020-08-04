@@ -15,7 +15,7 @@ const PodcastCard = (props) => {
       <p className="card-text">Episode title: {props.episodeTitle}</p>
       <p className="card-text">{props.description}</p>
       <Link to={`/podcast/${props.id}`}>
-        <button className="pc-button" aria-label='details-button' role
+        <button className="pc-button" title={props.podcastTitle} aria-label='details-button' role
         ='button'> 
           More information about this Podcast
         </button>

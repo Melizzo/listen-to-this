@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = ({ findResults }) => {
+const Header = ({ findResults, reset }) => {
   const [searchInput, setSearchInput] = useState("");
 
   const search = () => {
     findResults(searchInput);
-    setSearchInput("");
+		setSearchInput("");
   };
 
   const buttonsEnabled = searchInput.trim() !== "";
@@ -15,7 +15,7 @@ const Header = ({ findResults }) => {
   return (
     <header>
       <Link to="/">
-        <h1 className="app-header-title">Listen To This!</h1>
+        <h1 className="app-header-title" onClick={(() => reset())}>Listen To This!</h1>
       </Link>
       <form className="search-bar">
         <input
