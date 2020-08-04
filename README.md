@@ -15,14 +15,9 @@ This is a is a solo project built over the course of 6 days. The goal for this p
 ### User should be able to:
 #### Search for Podcasts by entering in a keyword of thier choice & see podcast episodes.
 ![1](https://media.giphy.com/media/MdqREUnjqtGkkPep3l/giphy.gif)
-#### Select any podcast from the list.
-![4](/gifs/4.gif)
-#### See additional podcast details.
-![5](/gifs/5.gif)
-#### Select Podcast as ability to listen to later.
-![6](/gifs/6.gif)
-#### View all saved podcasts, and remove them from the list. 
-![7](/gifs/7.gif)
+#### Select a podcast to listen to, view saved podcasts, and remove podcasts
+![4](https://media.giphy.com/media/MBCXc3fq10euTG7dZy/giphy.gif)
+
 
 ## Setup
 1. clone down this repo to desired location
