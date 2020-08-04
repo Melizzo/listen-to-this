@@ -13,12 +13,8 @@ This is a is a solo project built over the course of 6 days. The goal for this p
 
 ## User story:
 ### User should be able to:
-#### Search for Podcasts by entering in a keyword of thier choice.
-![1](/gifs/1.gif)
-#### See error page if there is issue from server side.
-![2](/gifs/2.gif)
-#### See a list of podcast episodes that have the searched keyword.
-![3](/gifs/3.gif)
+#### Search for Podcasts by entering in a keyword of thier choice & see podcast episodes.
+![1](https://media.giphy.com/media/MdqREUnjqtGkkPep3l/giphy.gif)
 #### Select any podcast from the list.
 ![4](/gifs/4.gif)
 #### See additional podcast details.
