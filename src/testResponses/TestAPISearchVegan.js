@@ -1,7 +1,7 @@
-{"results": [
+const TestAPISearchVegan = [
   {
       "audio": "https://www.listennotes.com/e/p/3422eda9e3c44e0bb81c19039d4cf439/",
-      "audio_length_sec": 1612,
+      "audio_length_sec": 1613,
       "rss": "Please upgrade to the PRO plan to see this field",
       "description_highlighted": "...We touched upon: The definition of organic and <span class=\"ln-search-highlight\">vegan</span> gardening Why veganism is gaining so much traction What products do and don’t qualify for use in a <span class=\"ln-search-highlight\">vegan</span> garden What is no-dig gardening <span class=\"ln-search-highlight\">Vegan</span> composts",
       "description_original": "Matthew Appleby is a multi award-winning horticultural journalist who regularly writes for gardening magazines, national newspapers and the industry bible Horticulture Week. Matthew is a long-time vegan and organic gardener and has a wealth of growing experience upon which to base his new book, The Super Organic Gardener. The book is released on the 31st January 2019 and I spoke to Matthew about what it means to garden in this style.   We touched upon: The definition of organic and vegan gardening Why veganism is gaining so much traction What products do and don’t qualify for use in a vegan garden What is no-dig gardening Vegan composts, green manures, fertilisers , seeds and plants Matthew’s reasons for practising vegan gardening   Further reading: The Super Organic Gardener - Matthew Appleby Jan 2019 - Pen &amp; Sword  https://www.pen-and-sword.co.uk/The-Super-Organic-Gardener-Paperback/p/15572 Charles Dowding - No-Dig Gardening  https://www.charlesdowding.co.uk Poyntzfield Herb Nursery https://www.poyntzfieldherbs.co.uk Delfland Nurseries https://www.delfland.co.uk Walcot Organic Nursery https://walcotnursery.co.uk Hulme Garden Centre https://hulmegardencentre.org.uk   Get in touch; Email podcast@rootsandall.co.uk  Website www.rootsandall.co.uk  Twitter @rootsandall Instagram rootsandallpod   Patreon Link; Help us keep the podcast free &amp; independent! Donate as much or as little as you like at https://www.patreon.com/rootsandall ",
@@ -334,4 +334,6 @@
           ]
       }
   }
-]}
+]
+
+export default TestAPISearchVegan

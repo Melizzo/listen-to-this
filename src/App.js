@@ -21,14 +21,19 @@ const App = () => {
       const byPodcast = await getSearchedPodcasts(searchValue);
       setSearchedResults(byPodcast);
     }
+
     catch(error) {
       console.log(error)
     } 
   };
 
+  const reset = () => {
+    setSearchedResults([])
+  }
+
     return (
       <main>
-        <Header findResults={findResults} />
+        <Header findResults={findResults} reset={reset}/>
         <Switch>
         <Route 
           path="/podcast/:id"
